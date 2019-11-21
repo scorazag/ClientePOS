@@ -1,0 +1,100 @@
+<div class="container">
+  <!--Seccion de preguntas-->
+  <!--Pregunta consultar-->
+  <div class="card">
+    <div class="card-body" align="center">
+      <h2>Buscar UEA por salon y dia</h2>
+
+      <%= form_tag ({:action => 'consultar'})  do  %>
+        <p>
+          Dia:<%= text_field_tag :zip_code, params[:zip_code] %>
+          <br>
+          Hora:<%= text_field_tag :zip_code1, params[:zip_code2] %>
+          <%= submit_tag "Buscar", name:nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+  <!--Pregunta 2-->
+  <div class="card">
+    <div class="card-body" align="center">
+      <h2>Buscar UEA por palabra clave</h2>
+
+      <%= form_tag ({:action => 'pregunta2'})  do  %>
+        <p>
+          Palabra:<%= text_field_tag :preg2, params[:preg2] %>
+          <%= submit_tag "Buscar", name:nil %>
+        </p>
+      <% end %>
+      <%= render partial: "pregunta2" %>
+    </div>
+
+    <div id="res2"></div>
+  </div>
+  <!--Pregunta 3-->
+  <div class="card">
+    <div class="card-body" align="center">
+      <h2>Buscar UEA por en Dia</h2>
+
+      <%= form_tag ({:action => 'pregunta3'})  do  %>
+        <p>
+          Dia 1:<%= text_field_tag :preg3, params[:preg3] %>
+          <br>
+          <%= submit_tag "Buscar", name:nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+  <!--Pregunta4-->
+  <div class="card">
+    <div class="card-body" align="center">
+      <h2>Buscar UEA's de un tronco</h2>
+
+      <%= form_tag ({:action => 'pregunta4'})  do  %>
+        <p>
+          Tronco:<%= text_field_tag :preg4, params[:preg4] %>
+          <%= submit_tag "Buscar", name:nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+  <!--Pregunta5-->
+  <div class="card">
+    <div class="card-body" align="center">
+      <h2>Cuantos creditos tiene las Ueas de un Are de concentración</h2>
+
+      <%= form_tag ({:action => 'pregunta5'})  do  %>
+        <p>
+          Area:<%= text_field_tag :preg5, params[:preg5] %>
+          <%= submit_tag "Buscar", name:nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+  <!--Pregunta6-->
+  <div class="card">
+    <div class="card-body" align="center">
+      <h2>Cuantos creditos tiene una Uea</h2>
+
+      <%= form_tag ({:action => 'pregunta6'} )  do  %>
+        <p>
+          UEA:<%= text_field_tag :preg6, params[:preg6] %>
+          <%= submit_tag "Buscar", name:nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+  <!--pregunta7-->
+  <div class="card">
+    <div class="card-body" align="center">
+      <h2>Claves de las UEAs de un Area de Concentración</h2>
+
+      <%= form_tag ({:action => 'pregunta7'} )  do  %>
+        <p>
+          Area:<%= text_field_tag :preg7, params[:preg7] %>
+          <%= submit_tag "Buscar", name:nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>

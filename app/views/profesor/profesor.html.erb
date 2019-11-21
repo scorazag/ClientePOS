@@ -1,0 +1,91 @@
+<!-- Pagina responde pregunta Profesor-->
+<div class="container">
+  <!--Pregunta 1-->
+  <div class="card">
+    <div class="card-body" align="center">
+      <h2>saber donde esta el profesor ahorita</h2>
+
+      <%= form_tag ({:action => 'pregunta1'})  do  %>
+        <p>
+          Profesor:<%= text_field_tag :preg1, params[:preg1] %>
+          <br>
+          Horario:<%= text_field_tag :preg1b, params[:preg1b] %>
+
+          <%= submit_tag "Buscar", name:nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+  <!--Pregunta 2-->
+  <div class="card">
+    <div class="card-body" align="center">
+      <h2>Busca el Horario de un profesor</h2>
+
+      <%= form_tag ({:action => 'pregunta1'})  do  %>
+        <p>
+          Profesor:<%= text_field_tag :preg2, params[:preg2] %>
+
+          <%= submit_tag "Buscar", name:nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+  <!--Pregunta 3-->
+  <div class="card">
+    <div class="card-body" align="center">
+      <h2>Busca los profesores que imparten una UEA</h2>
+
+      <%= form_tag ({:action => 'pregunta3'})  do  %>
+        <p>
+          UEA:<%= text_field_tag :preg3, params[:preg3] %>
+
+          <%= submit_tag "Buscar", name:nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+  <!--Pregunta 4-->
+  <div class="card">
+    <div class="card-body" align="center">
+      <h2>Buscar cubiculo y asesira de un profesor</h2>
+
+      <%= form_tag ({:action => 'pregunta4'})  do  %>
+        <p>
+          profesor:<%= text_field_tag :preg4, params[:preg4] %>
+
+          <%= submit_tag "Buscar", name:nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+  <!--Pregunta 5-->
+  <div class="card">
+    <div class="card-body" align="center">
+      <h2>Buscar profesores que den asesoria de una uea</h2>
+
+      <%= form_tag ({:action => 'pregunta5'})  do  %>
+        <p>
+          Uea:<%= text_field_tag :preg5, params[:preg5] %>
+
+          <%= submit_tag "Buscar", name:nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+
+  <!--Pregunta 6-->
+  <div class="card">
+    <div class="card-body" align="center">
+      <h2>Buscar profesores de un departamento</h2>
+
+      <%= form_tag ({:action => 'pregunta6'})  do  %>
+        <p>
+          Departamento:<%= text_field_tag :preg6, params[:preg6] %>
+
+          <%= submit_tag "Buscar", name:nil %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+
+</div>
